@@ -30,13 +30,14 @@
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear;
-  /* в задании не указана задержка для центра текста при ховере только для основного тела */
+  transition-delay: 0.03s;
+ 
 }
 
 .like-icon .main-body {
   fill: transparent;
   transition: fill 0.3s linear;
-  /* а тут (основное тело сердца) задержка по заданию 0.05s написал ниже*/
+  transition-delay: 0s;
 }
 
 .like-icon:hover .core {
@@ -47,14 +48,6 @@
 .like-icon:hover .main-body {
   fill: var(--heart__outline__color);
   transition-delay: 0.05s;
-}
-
-.like-icon .core {
-  transition-delay: 0.03s;
-}
-
-.like-icon .main-body {
-  transition-delay: 0s;
 }
 
 .like-icon:active .core {
