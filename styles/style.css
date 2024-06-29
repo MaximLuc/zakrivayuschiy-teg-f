@@ -395,6 +395,7 @@
   }
 }
 
+
 .on_image_text {
   text-shadow: 1px 0 var(--background__color), -1px 0 var(--background__color),
     0 1px var(--background__color), 0 -1px var(--background__color);
