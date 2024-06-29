@@ -60,7 +60,6 @@
   line-height: 49px;
   text-align: left;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .header-title_menu {
@@ -214,6 +213,14 @@
   cursor: pointer;
   overflow: hidden;
   transition: color 0.5s ease-in-out;
+  color: var(--accent__color);
+  font-size: 14px;
+  gap: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__save:focus,
@@ -259,16 +266,7 @@
   padding: 0 32px 100px 32px;
 }
 
-.footer__save {
-  color: var(--accent__color);
-  font-size: 14px;
-  gap: 8px;
-  padding: 14px 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .footer_icon {
   color: var(--accent__color);
@@ -394,7 +392,6 @@
     text-stroke: 1px var(--background__color);
   }
 }
-
 
 .on_image_text {
   text-shadow: 1px 0 var(--background__color), -1px 0 var(--background__color),
