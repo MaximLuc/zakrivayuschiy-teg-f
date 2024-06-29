@@ -17,4 +17,423 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  font-variation-settings: "wght" var(--font-weight-body);
+  font-size: 18px;
+  background-color: var(--background__color);
+  color: var(--accent__color);
+  background-image: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  color: var(--accent__color);
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header__theme-menu {
+  padding: 120px 0px 0px 0px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: clamp(375px, 100%, 696px);
+  height: clamp(327px, 10%, 368px);
+  background-color: var(--background__container);
+  grid-area: 2 / 1 / span 1 / span 3;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--accent__color);
+}
+
+.header-title {
+  font-family: var(--font-accent);
+  font-size: clamp(49px, 8vw, 65px);
+  font-weight: 400;
+  line-height: 49px;
+  text-align: left;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-title_menu {
+  padding-top: 3px;
+  font-size: clamp(14px, 2vw, 23px);
+}
+
+.theme-menu__button {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-accent);
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.menu-button:focus,
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent__color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__list {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.theme-menu__button:disabled::before {
+  animation: moveArrow 0.5s ease-in-out infinite alternate;
+  content: "▶";
+  position: absolute;
+  left: -15px;
+
+  top: 50%;
+}
+
+.card-container {
+  margin: auto;
+  width: clamp(375px, calc(100%), 700px);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background__color);
+  border: 2px solid var(--accent__color);
+}
+
+.title_card {
+  padding: 5px 10px;
+  font-variation-settings: "wght" var(--font-weight-heading);
+  border-bottom: 2px solid var(--accent__color);
+  line-height: 21.78px;
+  font-size: 18px;
+}
+
+.card_container_text {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--accent__color);
+}
+
+.description_container_card {
+  padding: 25px 25px 0px 25px;
+}
+
+.card_description_start {
+  padding-bottom: 27px;
+}
+
+.buttons_card {
+  font-family: var(--font-accent);
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  padding-right: 25px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent__color);
+}
+
+.card__like-button {
+  background-color: var(--background__color);
+  padding: 1px 35px;
+  border: 2px solid var(--accent__color);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+  font-size: 14px;
+  height: 38px;
+}
+
+.footer__save {
+  background-color: var(--background__color);
+  border: 2px solid var(--accent__color);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+}
+
+.footer__save:focus,
+.card__like-button:focus {
+  outline: none;
+}
+
+.footer__save:focus-visible,
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent__color);
+}
+
+.footer__save::before,
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color__like__button);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.footer__save:hover::before,
+.card__like-button:hover::before {
+  transform: scaleX(1);
+}
+
+.floppy__ {
+  fill: red;
+}
+
+.footer__container {
+  color: var(--accent__color);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px 100px 32px;
+}
+
+.footer__save {
+  color: var(--accent__color);
+  font-size: 14px;
+  gap: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_icon {
+  color: var(--accent__color);
+
+  width: 30px;
+  height: 30px;
+}
+
+.button__text {
+  display: block;
+  color: var(--accent__color);
+  font-family: var(--font-accent);
+  font-weight: var(--font-weight-body);
+}
+
+.card_image {
+  display: block;
+  height: clamp(371px, 100%, 700px);
+  width: clamp(371px, 100%, 700px);
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.image__container {
+  height: clamp(371px, 100%, 700px);
+  width: clamp(371px, 100%, 700px);
+  position: relative;
+  display: inline-block;
+}
+
+.on_image_text {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  position: absolute;
+  right: 13px;
+  top: 25px;
+  color: var(--accent__color);
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  z-index: 1;
+}
+
+#save-dialog[open] {
+  text-transform: uppercase;
+  padding: 0px;
+  min-width: 344px;
+  height: 195px;
+  border: 2px solid var(--accent__color);
+  font-family: var(--font-accent);
+  font-variation-settings: "wght" var(--font-weight-body);
+  font-size: 14px;
+  background-color: var(--background__color);
+}
+
+#save-dialog[open] .save-dialog__container {
+  color: var(--accent__color);
+  padding: 30px 42px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /* column-gap: 20px; */
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog__icon {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.footer_icon.dialog__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.save-dialog__title {
+  grid-area: 1 / 2 / span 1 / span 1;
+  font-variation-settings: "wght" var(--font-weight-body);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.dialog__button {
+  grid-area: 2 / 1 / span 1 / span 2;
+}
+
+.card__image__blank__sheet {
+  filter: grayscale(0.5);
+}
+
+.card__image__doesnt_work {
+  filter: saturate(3);
+}
+
+.card__image__Chasing__Ideal {
+  filter: hue-rotate(30deg);
+}
+
+.card__image__whos__nearby {
+  filter: invert(0.8);
+}
+
+.card__image__workaround__strategies {
+  filter: sepia(1);
+}
+
+.card__image__give__up {
+  filter: blur(1rem);
+}
+
+.card__image__here__now {
+  filter: hue-rotate(95deg) contrast(0.5) blur(0.2rem);
+}
+
+#save-dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@supports (text-stroke: 1px var(--background__color)) {
+  .on_image_text {
+    -webkit-text-stroke: 1px var(--background__color);
+    text-stroke: 1px var(--background__color);
+  }
+}
+
+.on_image_text {
+  text-shadow: 1px 0 var(--background__color), -1px 0 var(--background__color),
+    0 1px var(--background__color), 0 -1px var(--background__color);
+}
+
+@media (width >= 600px) {
+  .footer__save {
+    background-color: var(--background__color);
+    flex-direction: row;
+    padding: 16px 20px;
+  }
+
+  .on_image_text {
+    right: 25px;
+  }
+
+  #save-dialog[open] {
+    max-width: 360px;
+    height: 195px;
+  }
+
+  .header__theme-menu {
+    padding-top: 145px;
+  }
+
+  .header-title_menu {
+    padding-top: 15px;
+  }
+
+  .theme-menu__list {
+    padding-top: 9px;
+  }
+
+  .footer_icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .buttons_card {
+    padding-top: 23px;
+  }
 }
