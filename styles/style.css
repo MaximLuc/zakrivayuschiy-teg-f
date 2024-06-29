@@ -297,17 +297,6 @@
   display: inline-block;
 }
 
-.on_image_text {
-  font-family: var(--font-accent);
-  font-size: 14px;
-  position: absolute;
-  right: 13px;
-  top: 25px;
-  color: var(--accent__color);
-  mix-blend-mode: hard-light;
-  opacity: 50%;
-  z-index: 1;
-}
 
 #save-dialog[open] {
   text-transform: uppercase;
@@ -396,6 +385,15 @@
 .on_image_text {
   text-shadow: 1px 0 var(--background__color), -1px 0 var(--background__color),
     0 1px var(--background__color), 0 -1px var(--background__color);
+  font-family: var(--font-accent);
+  font-size: 14px;
+  position: absolute;
+  right: 13px;
+  top: 25px;
+  color: var(--accent__color);
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  z-index: 1;
 }
 
 @media (width >= 600px) {
