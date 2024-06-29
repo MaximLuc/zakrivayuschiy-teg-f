@@ -46,7 +46,7 @@
   padding: 120px 0px 0px 0px;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 99px;
   display: flex;
   flex-direction: column;
   width: clamp(375px, 100%, 696px);
@@ -145,7 +145,7 @@
 .card-container {
   margin: auto;
   width: clamp(375px, calc(100%), 700px);
-  margin-bottom: 50px;
+  margin-bottom: 51px;
   display: flex;
   flex-direction: column;
   background-color: var(--background__color);
@@ -179,7 +179,7 @@
 
 .buttons_card {
   font-family: var(--font-accent);
-  gap: 1px;
+  gap: 5px;
   display: flex;
   justify-self: end;
   align-self: end;
@@ -189,6 +189,7 @@
 }
 
 .card__icon-button {
+  padding: 0px;
   height: 38px;
   margin-bottom: 2px;
   background-color: transparent;
@@ -265,7 +266,7 @@
   fill: red;
 }
 
-.footer__container {
+.save__button__container {
   color: var(--accent__color);
   margin: auto;
   display: flex;
@@ -437,6 +438,10 @@
   }
 
   .buttons_card {
-    padding-top: 23px;
+    padding-top: 26px;
+  }
+
+  .card-container{
+    margin-bottom: 49px;
   }
 }
