@@ -27,6 +27,7 @@
     linear-gradient(to bottom, #007f0c 0%, #004306 100%);
   --background__container: rgba(0, 0, 0, 1);
   --heart__outline__color: rgba(0, 204, 20, 1);
+  --color__like__button: rgba(0, 204, 20, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +53,7 @@
       linear-gradient(to bottom, #007f0c 0%, #004306 100%);
     --background__container: rgba(0, 0, 0, 1);
     --heart__outline__color: rgba(0, 204, 20, 1);
+    --color__like__button: rgba(0, 204, 20, 1);
   }
 }
 
@@ -78,5 +80,6 @@
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
     --background__container: rgba(255, 255, 255, 1);
     --heart__outline__color: rgba(0, 0, 0, 1);
+    --color__like__button: rgba(255, 255, 255, 1);
   }
 }

@@ -30,27 +30,41 @@
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear;
+  /* в задании не указана задержка для центра текста при ховере только для основного тела */
 }
 
 .like-icon .main-body {
   fill: transparent;
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear;
+  /* а тут (основное тело сердца) задержка по заданию 0.05s написал ниже*/
 }
 
 .like-icon:hover .core {
   fill: var(--heart__outline__color);
+  transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
   fill: var(--heart__outline__color);
+  transition-delay: 0.05s;
+}
+
+.like-icon .core {
+  transition-delay: 0.03s;
+}
+
+.like-icon .main-body {
+  transition-delay: 0s;
 }
 
 .like-icon:active .core {
   fill: var(--fill__color);
+  transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
   fill: var(--fill__color);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
@@ -60,17 +74,19 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--fill__color);
-  transition-delay: 0.06s;
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--fill__color);
-  transition-delay: 0.12s;
+  transition-delay: 0.06s;
 }
 
 .like-icon.is-liked .sparks {
   opacity: 1;
-  animation: spark-animation 0.3s ease-in forwards;
+  animation: spark-animation 0.3s ease-in;
+  animation-direction: alternate;
+  transition-delay: 0.3s;
 }
 
 @keyframes spark-animation {
@@ -95,6 +111,8 @@
 
 .like-icon.is-liked {
   animation: scale-animation 0.3s ease-in;
+  animation-direction: alternate;
+  transition-delay: 0.1s;
 }
 
 .heart-button:not(.is-liked) .contour {
