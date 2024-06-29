@@ -17,15 +17,3 @@
         url("Inter-Variable.woff2") format("woff2 supports variations"),
         url("Inter-Variable.woff2") format("woff2");
 }
-
-@font-face {
-    font-display: swap;
-    font-family: "Inter";
-    font-weight: 785;
-    font-style: normal;
-    src:
-        local("Inter-Bold"),
-        url("Inter-Variable.woff2") format("woff2-variations"),
-        url("Inter-Variable.woff2") format("woff2 supports variations"),
-        url("Inter-Variable.woff2") format("woff2");
-}
