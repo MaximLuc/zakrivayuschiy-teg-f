@@ -31,7 +31,6 @@
   fill: transparent;
   transition: fill 0.3s linear;
   transition-delay: 0.03s;
- 
 }
 
 .like-icon .main-body {
@@ -73,11 +72,12 @@
 .like-icon.is-liked .contour {
   fill: var(--fill__color);
   transition-delay: 0.06s;
+  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .sparks {
   opacity: 1;
-  animation: spark-animation 0.3s ease-in;
+  animation: spark-animation 0.3s ease-in forwards;
   animation-direction: alternate;
   transition-delay: 0.3s;
 }

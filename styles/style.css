@@ -166,10 +166,6 @@
   border-top: 2px solid var(--accent__color);
 }
 
-.card_description {
-  line-height: 21px;
-}
-
 .description_container_card {
   padding: 25px 25px 0px 25px;
   display: flex;
@@ -207,8 +203,7 @@
 }
 
 .card__like-button {
-  padding: 1px 35px;
-
+  width: 130px;
   height: 38px;
 }
 
@@ -218,7 +213,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease;
   font-size: 14px;
 }
 
@@ -251,11 +246,6 @@
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
   mix-blend-mode: difference;
-
-  /* не понимаю коментария , Функция, время и правило перехода не соответствует заданию к проекту */
-  /* Задание: По наведению на кнопку должен плавно слева направо выезжать псевдоэлемент. Добиться этого можно двумя путями: через scale от 0 до 1 
-или через translate от -100% по оси X до 0. Во втором случае кнопке придётся задать overflow.
-Плавность здесь — 0.5s ease-in-out*/
 }
 
 .interactive_buttons:hover::before {
@@ -379,7 +369,7 @@
 }
 
 .save-dialog[open]::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .on_image_text {
@@ -394,6 +384,11 @@
   mix-blend-mode: hard-light;
   opacity: 50%;
   z-index: 1;
+}
+/* Добавил по макету в прошлый раз (скрины что отображается корректно оставил в папке images) 
+не знаю в чем может быть проблемма т.к. свойство стандартное*/
+.card_description {
+  line-height: 21px;
 }
 
 @supports (-webkit-text-stroke: 1px var(--background__color)) or
